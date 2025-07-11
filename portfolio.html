@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- linking bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- linking css -->
+    <link rel="stylesheet" href="portfolio.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <!-- reloader -->
+    <div class="loader-wrapper">
+        <div class="loader" id="preloader"></div>
+    </div>
+
+    <!-- cursor glow -->
+    <div class="cursor-glow"></div>
+
+
+    <!-- navigation bar -->
+
+    <nav class="navbar bg-body-tertiary colour">
+        <div class="container-fluid">
+            <div class="nav-left">
+                <!-- <img class="nav-photo" src="images/photo.jpeg" alt="My Photo"> --><i
+                    class="fa-solid fa-code fa-2xl"></i>
+                <div>Aakash Srivastava</div>
+            </div>
+            <div class="d-flex nav-button" role="navigation">
+                <a class="nav-btn" href="#contact"><i class="fa-solid fa-id-badge" style="color: #fcfcfc;"></i> Contact
+                    Me</a>
+                <a class="nav-btn" href="#projects"><i class="fa-solid fa-terminal"
+                        style="color: #ffffff;"></i>Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navigation bar for smaller screen -->
+    <nav class="navbar navbar-dark bg-dark fixed-top sm-nav">
+
+        <div class="sm-nav-left">
+            <i class="fa-solid fa-code fa-l"></i>
+            <div class="sm-nav-name">Aakash Srivastava</div>
+        </div>
+
+    </nav>
+
+
+    <hr style="border: 1px solid white; width: 100%;">
+
+    <!-- first page -->
+
+
+    <div class="first-page" data-aos="fade-up" id="home">
+        <div class="first-left">
+
+            <div class="name"> Hi, I'm Aakash</div>
+
+            <h3 style="color:#00ADB5; font-weight: bolder;">Front-End Developer🚀 </h3>
+            <p>I Write Code, I Build Things, I Solve Problems and I show people that I Love To Code(I DO).</p>
+            <a class="resume-btn" href="Aakash-resume.pdf" download>Download Resume <i class="fa-solid fa-download"
+                    style="color: #ffffff;"></i>
+            </a>
+
+        </div>
+        <div class="first-right">
+            <dotlottie-wc class="first-animation"
+                src="https://lottie.host/655880ee-e435-44ae-8177-e807c80c3ec4/3xtYoyEuR6.lottie" speed="1" autoplay
+                loop></dotlottie-wc>
+        </div>
+    </div>
+
+    <!-- about-me page -->
+    <div class="about-me" id="about-me">
+        <div class="about-left" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <img class="about-photo larger" src="images/mtself.png" alt="Developer">
+        </div>
+        <div class="about-right" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="about-name"><span class="about-name"
+                    style="font-family: 'Orbitron', sans-serif; font-weight:bolder"> About</span><span
+                    style="font-family: 'Orbitron', sans-serif;color:#00ADB5;font-weight:bolder"> me</span>
+            </div>
+            <p id="paragraph">
+                I’m Aakash Srivastava, a passionate third-year Computer Science undergraduate specializing in
+                Artificial Intelligence & Machine Learning at Manipal University Jaipur. I’ve built impactful projects
+                like a legal AI chatbot for Smart India Hackathon 2024 and a
+                women’s
+                safety carpool prototype with live dashcam, SOS, and tracking features. I've ranked in the
+                top 5 at<span id="dots">...</span>
+                <span id="moreText" style="display: none;">
+
+                    national-level hackathons (SIH, SPE-VIT, IIT Jodhpur) and consistently maintained academic
+                    excellence with a Dean’s Certificate and a 9.22 GPA in the 2nd semester. I’m also the
+                    Graphic Design
+                    Coordinator for the AIML Community, contributing creatively to promotions and spotlight
+                    campaigns. I
+                    love building creative UIs and am proficient in tools like Python, C++, MySQL, HTML/CSS,
+                    GCP, and
+                    MongoDB.
+                </span>
+            </p>
+            <button onclick="toggleReadMore()" id="readMoreBtn">Read more</button>
+        </div>
+    </div>
+
+
+    <!-- my-projects -->
+
+    <!-- <div class="project" id="projects">
+
+        <div class="about-name" data-aos="fade-up">
+            <span style="font-family: 'Orbitron', sans-serif ;color:#00ADB5; font-weight: bold;">My</span>
+            <span style="font-family: 'Orbitron', sans-serif; font-weight: bold;">Projects</span>
+        </div>
+
+        <div class="container text-center">
+            <div class="row justify-content-center d-flex">
+                <div class="col-4 sm website">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="images/chefwebsite.png" class="card-img-top" alt="..."
+                                style="background-color: white;">
+
+                            <h5 class="card-title">Chef Cart Website</h5>
+                            <p class="card-text">A web-based platform that allows users to discover and book
+                                professional chefs for private events and home dining experiences. The site
+                                features
+                                chef profiles, availability, custom menus, secure bookings, and user reviews —
+                                designed to simplify the process of hiring a personal chef with style and
+                                convenience.</p>
+                            <a href="https://chef-website-87459.web.app/" class="btn btn-primary project-btn">Check
+                                Website</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 sm snake">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="images/snake-game.png" alt="..." style="background-color: white;"
+                                class="card-img-top">
+
+                            <h5 class="card-title">Snake Game</h5>
+                            <p class="card-text">A classic Snake game built using HTML, CSS, and JavaScript. The
+                                game features smooth keyboard controls, dynamic scoring, and collision
+                                detection.
+                                Designed with a responsive layout and clean UI, it offers a nostalgic arcade
+                                experience playable directly in the browser — no libraries or frameworks used..
+                            </p>
+                            <a href="https://github.com/Aakash-780/Snake-game.git"
+                                class="btn btn-primary project-btn ">View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 sm weather ">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <img src="images/weather-api.png" class="card-img-top" alt="..."
+                                style="background-color: white;">
+
+                            <h5 class="card-title">Weather Forecast</h5>
+                            <p class="card-text">A sleek Weather Forecast app built using HTML, CSS, and
+                                JavaScript.
+                                The app features real-time data fetching, dynamic city search, and smooth UI
+                                updates. Designed with a responsive layout and clean interface, it provides
+                                accurate
+                                weather details like temperature, humidity, and conditions — all directly in the
+                                browser without any libraries or frameworks used.</p>
+                            <a href="https://github.com/Aakash-780/weather-forecast-website.git"
+                                class="btn btn-primary project-btn center">View on
+                                GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+    <div class="project" id="projects">
+
+        <div class="about-name" data-aos="fade-up">
+            <span style="font-family: 'Orbitron', sans-serif; color:#00ADB5; font-weight: bold;">My</span>
+            <span style="font-family: 'Orbitron', sans-serif; font-weight: bold;">Projects</span>
+        </div>
+
+        <div class="container card-list">
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/chefwebsite.png" class="card-img-top" alt="Chef Website">
+                    <h5 class="card-title">Chef Cart Website</h5>
+                    <p class="card-text">A web-based platform to discover and book professional chefs for private events
+                        and home dining experiences. Profiles, availability, custom menus, secure bookings, and reviews
+                        included.</p>
+                    <a href="https://chef-website-87459.web.app/" class="btn btn-primary project-btn">Check Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/snake-game.png" class="card-img-top" alt="Snake Game">
+                    <h5 class="card-title">Snake Game</h5>
+                    <p class="card-text">Classic snake game built using HTML, CSS, and JS. Smooth keyboard controls,
+                        dynamic scoring, and responsive UI for a nostalgic arcade experience in the browser.</p>
+                    <a href="https://github.com/Aakash-780/Snake-game.git" class="btn btn-primary project-btn">View on
+                        GitHub</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <img src="images/weather-api.png" class="card-img-top" alt="Weather App">
+                    <h5 class="card-title">Weather Forecast</h5>
+                    <p class="card-text">A sleek weather app with real-time data, city search, and smooth UI updates.
+                        Provides accurate weather details like temperature, humidity, and conditions — no libraries
+                        used.</p>
+                    <a href="https://github.com/Aakash-780/weather-forecast-website.git"
+                        class="btn btn-primary project-btn">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- skills -->
+
+    <div class="skills">
+        <div class="skills-left">
+            <div class="about-name">
+                <div class="skills-head" data-aos="fade-up">
+                    <span style="font-family: 'Orbitron', sans-serif; font-weight: bold;">Technical</span>
+                    <span
+                        style="font-family: 'Orbitron', sans-serif; color: #00ADB5; font-weight: bold;">Proficiencies</span>
+                </div>
+            </div>
+        </div>
+        <div class="skills-right">
+            <div class="skills-container">
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/color/48/html-5--v1.png" alt="html" />
+                    <p>HTML</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/plasticine/100/css3.png" alt="css" />
+                    <p>CSS</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/color/48/bootstrap--v2.png" alt="bootstrap" />
+                    <p>BOOTSTRAP</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/office/40/react.png" alt="react" />
+                    <p>REACT</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/color/48/javascript.png" alt="javascript" />
+                    <p>JS</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/sf-black/50/github.png" alt="github" />
+                    <p>GITHUB</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/ios-filled/50/c-plus-plus-logo.png"
+                        alt="c++" />
+                    <p>C++</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/pulsar-color/48/git.png" alt="git" />
+                    <p>GIT</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/3d-fluency/94/python.png" alt="python" />
+                    <p>PYTHON</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image"
+                        src="https://img.icons8.com/external-tal-revivo-filled-tal-revivo/50/external-mongodb-a-cross-platform-document-oriented-database-program-logo-filled-tal-revivo.png"
+                        alt="mongodb" />
+                    <p>MONGODB</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image" src="https://img.icons8.com/ios-filled/50/mysql.png" alt="mysql" />
+                    <p>MYSQL</p>
+                </div>
+                <div class="box">
+                    <img class="skills-image"
+                        src="https://img.icons8.com/external-tal-revivo-duo-tal-revivo/25/external-firebase-a-googles-mobile-platform-that-helps-you-quickly-develop-high-quality-apps-logo-duo-tal-revivo.png"
+                        alt="firebase" />
+                    <p>FIREBASE</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+
+    <div class="form" id="contact">
+        <div class="form-left" data-aos="fade-right">
+            <div><span class="name" style="font-family: 'Orbitron', sans-serif;font-weight: bolder;"> Got a
+                    project
+                    in</span><span class="name"
+                    style="color:#00ADB5;font-family: 'Orbitron', sans-serif;font-weight: bolder;"> mind?</span>
+            </div>
+            <dotlottie-wc src="https://lottie.host/51f7e7ed-ab62-4efd-ba01-2a9f92688f1a/hSPFDFAgow.lottie"
+                class="second-animation" speed="1" autoplay loop>
+            </dotlottie-wc>
+        </div>
+
+        <div class="form-right" data-aos="fade-left">
+            <form action="https://formspree.io/f/manjvegw" method="POST" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your name</label>
+                        <input type="text" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Your email</label>
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Your message</label>
+                    <textarea name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- contact smaller screen -->
+
+    <div class="form form-smaller" id="contact-sm">
+        <div><span class="form-name" style="font-family: 'Orbitron', sans-serif;font-weight: bolder;"> Got a
+                project
+                in</span><span class="form-name"
+                style="color:#00ADB5;font-family: 'Orbitron', sans-serif;font-weight: bolder;"> mind?💡</span>
+        </div>
+
+
+        <form action="https://formspree.io/f/manjvegw" method="POST" class="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Your name</label>
+                    <input type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label>Your email</label>
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Your message</label>
+                <textarea name="message" placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+
+    </div>
+
+    <!-- footer -->
+    <hr>
+
+    <div class="footer">
+        <div class="r1-flex">
+            <div class="r1">
+                <span><img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/home.png"
+                        alt="home" /></span>
+                <span><a class="deco" href="#home">Home</a></span>
+            </div>
+            <div class="r1">
+                <span><img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/person-male.png"
+                        alt="person-male" /></span>
+                <span><a class="deco" href="#about-me">About Me</a></span>
+            </div>
+            <div class="r1">
+                <span><i class="fa-solid fa-terminal fa-xl" style="color: #ffffff;"></i></span>
+                <span><a class="deco" href="#projects">Projects</a></span>
+            </div>
+
+        </div>
+        <div class="r2-flex">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/aakashh_780">
+                        <i class="fab fa-instagram icon"></i> </a>
+                </li>
+                <li>
+                    <a href="https://github.com/Aakash-780"><i class="fab fa-github icon"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/aakash-srivastava-9608b4291"><i
+                            class="fab fa-linkedin-in icon"></i></a>
+                </li>
+                <li>
+                    <a href="mailto:aakashsrivastava2004@gmail.com"><i class="fas fa-envelope icon"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="r3-flex">
+            <p>Made with <i class="fa-solid fa-heart fa-beat" style="color: #ff0505;"></i> by Aakash Srivastava</p>
+        </div>
+    </div>
+
+
+
+    <!-- linking bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- linking js-->
+    <script src="portfolio.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/adde4cbb52.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
