@@ -1,30 +1,48 @@
-# Personal Portfolio Website
+# 💼 Personal Portfolio Website
 
-Welcome to my personal portfolio website, hosted on Firebase!  
+Welcome to my personal portfolio website!  
 
-## 🚀 About
+This website is designed to showcase my projects, skills, and experience in a clean, modern, and responsive way.  
 
-This website showcases my projects, skills, and professional experience. It is designed to provide visitors with an overview of my work and how to connect with me.
-
-👉 [Visit Now](https://portfolio-7b70c.web.app)
-
-
-## 🌟 Features
-
-- Responsive design
-- Modern and clean UI
-- Projects and work showcase
-- Contact information and social media links
-- Firebase hosting for fast and secure deployment
-
-## 🛠️ Technologies Used
-
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Firebase Hosting
+👉 **[Visit Now](https://portfolio-7b70c.web.app)**
 
 ---
 
-Thank you for visiting my portfolio — I hope you enjoy exploring my work!
+## 🚀 About
+
+This portfolio serves as my online presence, allowing visitors to learn about me, view my past work, and get in touch easily. Whether you're a recruiter, collaborator, or simply curious, I invite you to explore!
+
+---
+
+## 🌟 Features
+
+- ✨ **Modern UI** — Clean and professional design with smooth animations
+- 📱 **Fully responsive** — Works perfectly on desktops, tablets, and mobile devices
+- 💼 **Projects section** — Highlights my key projects with details
+- 📝 **About me** — Overview of my background and interests
+- 📧 **Contact information** — Social links and email for easy connection
+- ⚡ **Animations** — Interactive animations using Lottie and Animate.css
+- 🚀 **Hosted on Firebase** — Fast, secure, and globally accessible
+
+---
+
+## 🛠️ Technologies & Libraries Used
+
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Bootstrap 5.3.7**
+- **Firebase Hosting**
+- **Google Fonts (Orbitron)**
+- **Animate.css**
+- **AOS (Animate On Scroll)**
+- **Font Awesome v5.6.3**
+- **Lottie animations (via `<dotlottie-wc>`)**
+
+---
+
+## ⭐️ Show your support
+
+If you like this project, please ⭐️ the repository!  
+
+It really helps and motivates me to build more cool things. Thank you! 🚀
